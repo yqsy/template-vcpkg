@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.25)
-project(template_vcpkg)
+project(template-vcpkg)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MT")
 add_compile_options(/experimental:module)
@@ -14,4 +14,4 @@ foreach(source ${sources})
     source_group("src${group_path}" FILES "${source}")
 endforeach()
 
-add_library(template_vcpkg STATIC ${sources})
+add_library(template-vcpkg STATIC ${sources})
