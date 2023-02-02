@@ -22,9 +22,8 @@ install(TARGETS template-vcpkg
         LIBRARY DESTINATION lib
         RUNTIME DESTINATION bin)
 
-install(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/include/"
-        DESTINATION include
-        FILES_MATCHING PATTERN "*.h")
+install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/src/template-vcpkg.ixx"
+        DESTINATION include/template-vcpkg)
 
 install(EXPORT template-vcpkg-targets
         FILE template-vcpkg-targets.cmake
