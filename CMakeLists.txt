@@ -22,10 +22,10 @@ install(TARGETS template-vcpkg
         LIBRARY DESTINATION lib
         RUNTIME DESTINATION bin)
 
-install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/src/template-vcpkg.ixx"
-        DESTINATION include/template-vcpkg)
+# install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/src/template-vcpkg.ixx"
+#         DESTINATION include/template-vcpkg)
 
-install(EXPORT template-vcpkg-targets
-        FILE template-vcpkg-targets.cmake
-        NAMESPACE template-vcpkg::
-        DESTINATION lib/cmake/template-vcpkg)
+# install(EXPORT template-vcpkg-targets
+#         FILE template-vcpkg-targets.cmake
+#         NAMESPACE template-vcpkg::
+#         DESTINATION lib/cmake/template-vcpkg)
