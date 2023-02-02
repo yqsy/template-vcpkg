@@ -15,3 +15,18 @@ foreach(source ${sources})
 endforeach()
 
 add_library(template-vcpkg STATIC ${sources})
+
+install(TARGETS template-vcpkg
+        EXPORT template-vcpkg-targets
+        ARCHIVE DESTINATION lib
+        LIBRARY DESTINATION lib
+        RUNTIME DESTINATION bin)
+
+install(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/include/"
+        DESTINATION include
+        FILES_MATCHING PATTERN "*.h")
+
+install(EXPORT template-vcpkg-targets
+        FILE template-vcpkg-targets.cmake
+        NAMESPACE template-vcpkg::
+        DESTINATION lib/cmake/template-vcpkg)
