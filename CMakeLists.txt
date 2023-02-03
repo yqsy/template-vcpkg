@@ -16,6 +16,8 @@ endforeach()
 
 add_library(template-vcpkg STATIC ${sources})
 
+set(CMAKE_CONFIGURATION_TYPES Release CACHE STRING "Only build Release configuration" FORCE)
+
 install(TARGETS template-vcpkg
         EXPORT template-vcpkg-targets
         ARCHIVE DESTINATION lib
